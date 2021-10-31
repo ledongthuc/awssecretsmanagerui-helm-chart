@@ -1,0 +1,22 @@
+replicaCount: 1
+
+image:
+  repository: ledongthuc/awssecretsmanagerui
+  pullPolicy: IfNotPresent
+  tag: "0.0.3"
+
+imagePullSecrets: []
+podAnnotations: {}
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources: {}
+
+autoscaling:
+  enabled: false
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
