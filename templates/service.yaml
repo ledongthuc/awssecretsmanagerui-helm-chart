@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: {{ .Values.name }}
   labels:
-    app.kubernetes.io/name: "AWS Secrets Manager UI"
-    app.kubernetes.io/instance: "aws-secrets-manager-ui"
+    app.kubernetes.io/name: {{ .Values.name }}
+    app.kubernetes.io/instance: {{ .Values.releaseName }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -13,4 +13,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- .Values.selectorLabels | nindent 4 }}
+    app.kubernetes.io/name: {{ .Values.name }}
+    app.kubernetes.io/instance: {{ .Values.releaseName }}
