@@ -12,4 +12,5 @@ jobs:
       - name: Publish Helm charts
         uses: stefanprodan/helm-gh-pages@master
         with:
+          charts_dir: charts
           token: ${{ secrets.GITHUB_TOKEN }}
