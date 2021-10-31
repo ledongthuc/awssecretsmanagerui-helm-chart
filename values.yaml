@@ -1,5 +1,7 @@
 replicaCount: 1
 
+fullname: AWS Secrets Manager UI
+
 image:
   repository: ledongthuc/awssecretsmanagerui
   pullPolicy: IfNotPresent
