@@ -20,6 +20,8 @@ resources: {}
 autoscaling:
   enabled: false
 
-nodeSelector: {}
+nodeSelector:
+  app.kubernetes.io/name: "AWS Secrets Manager UI"
+  app.kubernetes.io/instance: aws-secrets-manager-ui
 tolerations: []
 affinity: {}
