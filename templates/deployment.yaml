@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   name: {{ .Values.name }}
   labels:
-    {{- .Values.labels | nindent 4 }}
+    app.kubernetes.io/name: "AWS Secrets Manager UI"
+    app.kubernetes.io/instance: "aws-secrets-manager-ui"
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
