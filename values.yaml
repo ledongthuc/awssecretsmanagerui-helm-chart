@@ -19,7 +19,7 @@ resources: {}
 autoscaling:
   enabled: false
 
-labels: {}
+labels:
   app.kubernetes.io/name: "AWS Secrets Manager UI"
   app.kubernetes.io/instance: "aws-secrets-manager-ui"
 nodeSelector: {}
