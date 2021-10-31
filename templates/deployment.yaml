@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "secretsmanagerui-helm-chart.fullname" . }}
+  name: AWS Secrets Manager UI
   labels:
     {{- include "secretsmanagerui-helm-chart.labels" . | nindent 4 }}
 spec:
