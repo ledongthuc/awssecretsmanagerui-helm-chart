@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  aws-secrets-manager-ui-helm-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-31T15:25:58.404685+01:00"
+    description: A Helm chart for AWS Secrets Manager UI
+    digest: 9afe42aae7fe83c53a43fee5a775743baf2e0227ffe15cc094b3f1eaccf3351f
+    name: aws-secrets-manager-ui-helm-chart
+    type: application
+    urls:
+    - aws-secrets-manager-ui-helm-chart-0.0.3.tgz
+    version: 0.0.3
+generated: "2021-10-31T15:25:58.403869+01:00"
