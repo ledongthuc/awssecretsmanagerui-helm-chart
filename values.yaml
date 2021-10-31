@@ -1,5 +1,7 @@
 replicaCount: 1
 
+name: AWS Secrets Manager UI
+
 image:
   repository: ledongthuc/awssecretsmanagerui
   pullPolicy: IfNotPresent
@@ -17,6 +19,7 @@ resources: {}
 autoscaling:
   enabled: false
 
+labels: {}
 nodeSelector: {}
 tolerations: []
 affinity: {}

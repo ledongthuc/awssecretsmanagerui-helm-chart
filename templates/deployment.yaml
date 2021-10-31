@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: AWS Secrets Manager UI
+  name: {{ .Values.name }}
   labels:
-    {{- include "secretsmanagerui-helm-chart.labels" . | nindent 4 }}
+    {{- .Values.labels | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "secretsmanagerui-helm-chart.selectorLabels" . | nindent 6 }}
+      {{- .Values.selectorLabels | nindent 4 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "secretsmanagerui-helm-chart.selectorLabels" . | nindent 8 }}
+        {{- .Values.selectorLabels | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
