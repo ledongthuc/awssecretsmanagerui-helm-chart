@@ -1,7 +1,7 @@
 replicaCount: 1
 
-name: "AWS Secrets Manager UI"
-releaseName: aws-secrets-manager-ui
+nameOverride: ""
+fullnameOverride: ""
 
 image:
   repository: ledongthuc/awssecretsmanagerui
@@ -20,8 +20,6 @@ resources: {}
 autoscaling:
   enabled: false
 
-nodeSelector:
-  app.kubernetes.io/name: "AWS Secrets Manager UI"
-  app.kubernetes.io/instance: aws-secrets-manager-ui
+nodeSelector: {}
 tolerations: []
 affinity: {}
